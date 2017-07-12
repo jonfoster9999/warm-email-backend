@@ -23,8 +23,8 @@ Thanks,
 )
 Template.first.properties.create(:name => "email")
 Template.first.properties.create(:name => "subject")
-Template.first.properties.create(:name => "contact name")
-Template.first.properties.create(:name => "target name")
-Template.first.properties.create(:name => "contact company")
-Template.first.properties.create(:name => "my name")
+Template.first.properties.create(:name => "contact_name")
+Template.first.properties.create(:name => "target_name")
+Template.first.properties.create(:name => "contact_company")
+Template.first.properties.create(:name => "my_name")
 Template.first.save
