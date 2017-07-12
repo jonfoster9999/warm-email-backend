@@ -3,8 +3,7 @@ class RegistrationsController < ApplicationController
 		@user = User.new(:email => params["email"],
 						 :password => params["password1"]
 						 )
-		@user.templates << Template.new(:name => "Sample Template",
-										:body => "Some Body")
+		@user.templates << Template.first
 		if @user.save 
 			render json: @user
 		else 
