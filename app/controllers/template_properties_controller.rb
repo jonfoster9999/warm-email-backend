@@ -1,0 +1,2 @@
+class TemplatePropertiesController < ApplicationController
+end
