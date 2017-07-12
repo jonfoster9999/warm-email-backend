@@ -5,7 +5,6 @@ class RegistrationsController < ApplicationController
 						 )
 		@user.templates << Template.new(:name => "Sample Template",
 										:body => "Some Body")
-
 		if @user.save 
 			render json: @user
 		else 
