@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712160955) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20181021011342) do
 
   create_table "properties", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "sent_emails", force: :cascade do |t|
+    t.string   "email"
+    t.integer  "user_id"
+    t.string   "email_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "manual_follow_up", default: false
   end
 
   create_table "template_properties", force: :cascade do |t|

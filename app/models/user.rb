@@ -4,4 +4,5 @@ class User < ApplicationRecord
 	has_many :templates, through: :user_templates
 	validates :email, presence: true
 	validates :email, uniqueness: true
+	has_many :sent_emails
 end
